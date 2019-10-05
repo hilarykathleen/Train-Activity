@@ -1,0 +1,14 @@
+.header {
+   background-color: lightslategray;
+}
+
+h1 {
+    line-height: 350%;
+}
+
+h4 {
+    line-height: 150%;
+    padding: 10px;
+    background-color: lightgrey;
+    font-size: 18px;
+}

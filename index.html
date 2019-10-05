@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <title>Train-Activity</title>
+
+
+</head>
+
+<div class="container">
+
+<body>
+    <div class = "header">
+        <div class = "card transparent white-text center-align"><h1>TRAIN SCHEDULE</h1>
+        </div>
+    </div>
+
+    <table>
+        <span class="nav-title"><h4>Current Train Schedule</h4></span>
+        <thead>
+            <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+    
+            <tbody>
+              <tr>
+                <td>Alvin</td>
+                <td>Eclair</td>
+                <td>$0.87</td>
+              </tr>
+            </tbody>
+    </table>
+
+          
+        
+
+
+    <div class="inputform"></div>
+        <span class="nav-title"><h4>Add Train</h4></span>
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      <label for="textarea1">Train Name</label>
+                    <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea2" class="materialize-textarea"></textarea>
+                      <label for="textarea2">Destination</label>
+                    <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea3" class="materialize-textarea"></textarea>
+                      <label for="textarea3">First Train Time (HH:mm - Military Time)</label>
+                    <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea4" class="materialize-textarea"></textarea>
+                      <label for="textarea4">Frequency (min)</label>
+                    </div>
+                    </div>
+                </form>
+            </div>
+    </div>
+
+
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</div>
+    
+</body>
+</html>
