@@ -8,8 +8,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./assets/reset.css">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
     <title>Train-Activity</title>
-
 
 </head>
 
@@ -50,88 +51,34 @@
                 <form class="col s12">
                     <div class="row">
                     <div class="input-field col s12">
-                      <textarea type="text" id="textarea1" class="materialize-textarea"></textarea>
+                      <textarea type="text" id="train-name-input" class="materialize-textarea"></textarea>
                       <label for="textarea1">Train Name</label>
                     <div class="row">
                     <div class="input-field col s12">
-                      <textarea type="text" id="textarea2" class="materialize-textarea"></textarea>
+                      <textarea type="text" id="destination-input" class="materialize-textarea"></textarea>
                       <label for="textarea2">Destination</label>
                     <div class="row">
                     <div class="input-field col s12">
-                      <textarea type="number" id="textarea3" class="materialize-textarea"></textarea>
+                      <textarea type="number" id="first-train-time-input" class="materialize-textarea"></textarea>
                       <label for="textarea3">First Train Time (HH:mm - Military Time)</label>
                     <div class="row">
                     <div class="input-field col s12">
-                      <textarea type="number" id="textarea4" class="materialize-textarea"></textarea>
+                      <textarea type="number" id="frequency-input" class="materialize-textarea"></textarea>
                       <label for="textarea4">Frequency (min)</label>
                     </div>
                     </div>
-                    <button class="btn waves-effect waves-light black white-text" type="submit" name="action">Submit
+                    <button class="btn waves-effect waves-light black white-text" id="add-train-btn" type="submit" name="action">Submit
                         <i class="material-icons right">add</i>
                     </button>
                 </form>
             </div>
     </div>
 
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./assets/main.js"></script>
-
-    <button id="click-button">Click Me!!!!</button>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
-    <script src="/__/firebase/init.js"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyARLsFHHnRjnHTtfomX8ArxUoRRM6iN_W4",
-        authDomain: "hilary-train.firebaseapp.com",
-        databaseURL: "https://hilary-train.firebaseio.com",
-        projectId: "hilary-train",
-        storageBucket: "",
-        messagingSenderId: "43944516443",
-        appId: "1:43944516443:web:9546a09f4a64edb236987e"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    var database = firebase.database();
-
-      // Initializing our click count at 0
-      var clickCounter = 0;
-
-      // Functions
-      // ================================================================================
-
-      // On Click
-      $("#click-button").on("click", function() {
-        event.preventDefault();
-        // Add 1 to clickCounter
-        clickCounter++;
-
-        // **** Store Click Data to Firebase in a JSON property called clickCount *****
-        // **** Note how we are using the Firebase .set() method ****
-        // **** .ref() refers to the path you want to save your data to
-        // **** Since we left .ref() blank, it will save to the root directory
-        database.ref().set({
-          buttonCount: clickCounter
-        });
-
-        // Now! go to https://fir-click-counter-7cdb9.firebaseio.com/ to see the impact to the DB
-      });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     
 </body>
 </html>
