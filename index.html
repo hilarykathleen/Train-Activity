@@ -44,7 +44,7 @@
             </tbody>
     </table>
 
-    <!-- <div class="inputform"></div>
+    <div class="inputform"></div>
         <span class="nav-title"><h4>Add Train</h4></span>
             <div class="row">
                 <form class="col s12">
@@ -71,7 +71,7 @@
                     </button>
                 </form>
             </div>
-    </div> -->
+    </div>
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -116,6 +116,7 @@
 
       // On Click
       $("#click-button").on("click", function() {
+        event.preventDefault();
         // Add 1 to clickCounter
         clickCounter++;
 
