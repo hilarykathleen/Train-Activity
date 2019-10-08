@@ -68,14 +68,6 @@ var database = firebase.database();
     var destination = childSnapshot.val().dest;
     var firstTrain = parseInt(childSnapshot.val().first);
     var frequency = parseInt(childSnapshot.val().freq);
-  
-    // Train Info
-    // console.log(trainName);
-    // console.log(destination);
-    // console.log(firstTrain);
-    // console.log(frequency, 'train frequency');
-
-    // var trainStartPretty = moment.unix(firstTrain).format("hh:mm");
 
         // console.log("trying to modulo " + typeof(firstTrain) + " and  " + typeof(frequency));
     var remainder = firstTrain % frequency;
@@ -90,20 +82,11 @@ var database = firebase.database();
     console.log(nextArrival);
 
     $("#new-train-table").append("<tr><td>" + trainName +
-                "</td><td>" + destination +
-                "</td><td>" + frequency +
-                "</td><td>" + nextArrival + 
-                "</td><td>" + minAway + "<tr><td>");
-    
+            "<td>" + destination +
+            "<td>" + frequency +
+            "<td>" + nextArrival + 
+            "<td>" + minAway + "<td>");
+
     });
 
 });
-//   function(errorObject) {
-//     console.log("Errors handled: " + errorObject.code);
-  
-
-// });
-
-
-
-  
