@@ -23,7 +23,7 @@
     </div>
 
     <table>
-        <span class="nav-title"><h4>Current Train Schedule</h4></span>
+        <span class="nav-title" id="train-table"><h4>Current Train Schedule</h4></span>
         <thead>
             <tr>
                 <th scope="col">Train Name</th>
@@ -33,15 +33,10 @@
                 <th scope="col">Minutes Away</th>
               </tr>
             </thead>
-    
-            <tbody>
-              <tr>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-                <td>#</td>
-              </tr>
+
+            <tbody id="new-train-table">  
+
+                <!-- Want to append the train info to this element -->
             </tbody>
     </table>
 
@@ -53,14 +48,20 @@
                     <div class="input-field col s12">
                       <textarea type="text" id="train-name-input" class="materialize-textarea"></textarea>
                       <label for="textarea1">Train Name</label>
+                    </div>
+                    </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <textarea type="text" id="destination-input" class="materialize-textarea"></textarea>
                       <label for="textarea2">Destination</label>
+                    </div>
+                    </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <textarea type="number" id="first-train-time-input" class="materialize-textarea"></textarea>
                       <label for="textarea3">First Train Time (HH:mm - Military Time)</label>
+                    </div>
+                    </div>
                     <div class="row">
                     <div class="input-field col s12">
                       <textarea type="number" id="frequency-input" class="materialize-textarea"></textarea>
@@ -73,7 +74,7 @@
                 </form>
             </div>
     </div>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
